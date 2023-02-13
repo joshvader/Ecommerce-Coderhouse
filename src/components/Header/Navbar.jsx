@@ -4,6 +4,7 @@ import AvatarImage from "@/assets/images/image-avatar.png";
 import MenuIcon from "../icons/MenuIcon";
 import CartWidget from "../icons/CartWidget";
 import CloseIcon from "../icons/CloseIcon";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -29,22 +30,24 @@ const Navbar = () => {
         <button className=" md:hidden" onClick={handleOpenMenu}>
           <MenuIcon />
         </button>
+        <Link to={"/"}>
         <img
           src={LogoSneakes}
           alt="Logo sneakers"
           className="mr-auto mb-1 md:mr-0 "
         />
+        </Link>
         <nav
           className={navClass}
         >
           <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
             <CloseIcon />
           </button>
-          <a href="#">Collections</a>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <NavLink to="/">Collections</NavLink>
+          <NavLink to="/productos/men">Men</NavLink>
+          <NavLink to="/productos/women">Women</NavLink>
+          <NavLink to="/">About</NavLink>
+          <NavLink to="/">Contact</NavLink>
         </nav>
         <div className="flex gap-4">
           <button>

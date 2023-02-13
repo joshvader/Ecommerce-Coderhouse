@@ -8,4 +8,6 @@ Se crean los componentes Navbar, CartWidget y el componente ItemListContainer co
 #Segunda Pre-Entrega de Proyecto.
 Se agrega las rutas respectivas mediante el uso de React-Router-Dom, se establece el recorrido por medio del metodo map el cual recorre el arreglo de la base de datos de los productos ,se crea la sección de detalle del produco y se hace una separación de los productos de acuerdo al navbar por medio de NavLink de React-Router-Dom. 
 
-<h1> En la carpeta src/asset/images está el archivo gif donde muestra el manejo de la app</h1>
+<h1> App de Tienda Sneakers</h1>
+
+<img src="https://media.giphy.com/media/Cik2YtwW1lHHgzB3fT/giphy-downsized-large.gif"  />

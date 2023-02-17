@@ -43,11 +43,11 @@ const Navbar = () => {
           <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
             <CloseIcon />
           </button>
-          <NavLink to="/">Collections</NavLink>
-          <NavLink to="/productos/men">Men</NavLink>
-          <NavLink to="/productos/women">Women</NavLink>
-          <NavLink to="/">About</NavLink>
-          <NavLink to="/">Contact</NavLink>
+          <NavLink to="/" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">Collections</NavLink>
+          <NavLink to="/productos/men" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">Men</NavLink>
+          <NavLink to="/productos/women" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">Women</NavLink>
+          <NavLink to="/" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">About</NavLink>
+          <NavLink to="/" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">Contact</NavLink>
         </nav>
         <div className="flex gap-4">
           <button>

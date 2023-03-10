@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { arregloProductos } from "../../components/baseDatos/baseDatos"
+ import { arregloProductos } from "../../components/baseDatos/baseDatos"
+// import {db} from "../../firebaseConfig/firebase.js"
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 

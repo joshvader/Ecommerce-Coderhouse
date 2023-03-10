@@ -1,7 +1,13 @@
+
+
+
 const CartIcon = (props) => {
   return (
+    <>
+    
     <svg 
     {...props}
+    
     width="22" 
     height="20" 
     xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +16,10 @@ const CartIcon = (props) => {
     fillRule="nonzero"
 
     />
+    
     </svg>
+    
+    </>
   )
 }
 

@@ -7,7 +7,7 @@ import DeleteIcon from "../icons/DeleteIcon";
 
 export default () => { 
 
-    const {cartProducts} = useContext (useCartDetails)
+    const {cartProducts,deleteCartProducts} = useContext (useCartDetails)
     return (
         <section className="absolute top-28 left-0 z-10 w-full md:max-w-md  md:left-full md:top-20 md:-translate-x-full">
         <div className="mx-4 rounded-md bg-gray-100 drop-shadow-md">
@@ -22,10 +22,12 @@ export default () => {
             <img src={product.img} alt="" className="rounded-md" />
             <p>
               <h6>{product.title}</h6>
-              <span>${product.price} x 3</span> <span className="font-bold">$375.00</span>
+              <span>${product.price} x {product.quantity}</span>
+              {" "} 
+              <span className="font-bold">${product.price * product.quantity }</span>
             </p>
-            <button className="ml-auto">
-              <DeleteIcon className="hover:fill-orange-400"/>
+            <button className="ml-auto" onClick={() => deleteCartProducts(product.id)}>
+              <DeleteIcon   className="hover:fill-orange-400"/>
             </button>
           </article> 
             ))

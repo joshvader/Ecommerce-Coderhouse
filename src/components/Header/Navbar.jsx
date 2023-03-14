@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+
 import LogoSneakes from "@/assets/images/logo.svg";
 import AvatarImage from "@/assets/images/image-avatar.png";
 
@@ -7,9 +8,12 @@ import CartWidget from "../icons/CartWidget";
 import CloseIcon from "../icons/CloseIcon";
 import { Link, NavLink } from "react-router-dom";
 import CartDetail from "./CartDetail";
+import { useCartDetails } from "../../context/useCartDetails";
 
 const Navbar = () => {
 
+  const { totalQuantityProduct } = useContext(useCartDetails)
+  
   const [navClass, setNavClass] = useState("hidden font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0");
   const [isOpenDetailsCart, setDetailsCart] = useState(false)
 
@@ -47,9 +51,12 @@ const Navbar = () => {
           <NavLink to="/" className="border-b-2 border-orange-500 border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active">Contact</NavLink>
         </nav>
         <div className="flex gap-4">
-          <button onClick={() => setDetailsCart(!isOpenDetailsCart)}>
+          <button  className="relative" onClick={() => setDetailsCart(!isOpenDetailsCart)}>
             {/* Componente CartWidget */}
             <CartWidget />
+            <span className="absolute top-0 right-0 translate-x-1 bg-orange-400 px-2 text-xs rounded-full font-bold text-white">
+              {totalQuantityProduct}
+            </span>
           </button>
           <img src={AvatarImage} alt="" className="w-10" />
           {

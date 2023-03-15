@@ -33,7 +33,7 @@ export default (props) => {
     }
     
     return(
-        <useCartDetails.Provider value={{cartProducts,addCartProducts,deleteCartProducts, totalQuantityProduct, clearProductsList}}>
+        <useCartDetails.Provider value={{cartProducts,addCartProducts,deleteCartProducts, totalQuantityProduct}}>
             {props.children}
         </useCartDetails.Provider>
     )

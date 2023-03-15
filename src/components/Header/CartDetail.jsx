@@ -10,13 +10,10 @@ const db = getFirestore(appFirebase)
 
 export default () => { 
 
-    const {cartProducts,deleteCartProducts, clearProductsList} = useContext (useCartDetails)
+    const {cartProducts,deleteCartProducts} = useContext (useCartDetails)
 
 
-    const cleanCart= (id)=>{
-      
-
-    }
+    
 
     //esta función es para guardar la venta en la api o base de datos
     const saveInfo = async()=>{
@@ -38,7 +35,7 @@ Swal.fire({
   timer: 1500,
 
 })
-cartProducts
+
 
     }
     

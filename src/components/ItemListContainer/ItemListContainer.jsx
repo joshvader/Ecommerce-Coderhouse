@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { arregloProductos } from "../../components/baseDatos/baseDatos"
+import data from "../../products.json"
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ const ItemListContainer = () => {
 
   const promesa = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(arregloProductos);
+      resolve(data);
     }, 2000)
   })
 

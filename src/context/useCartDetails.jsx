@@ -27,9 +27,13 @@ export default (props) => {
     }
 
     const totalQuantityProduct = cartProducts.reduce((acc, current)=> current.quantity + acc , 0)
+
+    const clearProductsList = ()=>{
+        setCartProducts([])
+    }
     
     return(
-        <useCartDetails.Provider value={{cartProducts,addCartProducts,deleteCartProducts, totalQuantityProduct}}>
+        <useCartDetails.Provider value={{cartProducts,addCartProducts,deleteCartProducts, totalQuantityProduct, clearProductsList}}>
             {props.children}
         </useCartDetails.Provider>
     )

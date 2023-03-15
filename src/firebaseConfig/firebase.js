@@ -1,20 +1,19 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "@firebase/firestore"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB59w-PtG4gOhp0bi03vNwzInVEslUsOGo",
-  authDomain: "sneakersproducts-3111b.firebaseapp.com",
-  projectId: "sneakersproducts-3111b",
-  storageBucket: "sneakersproducts-3111b.appspot.com",
-  messagingSenderId: "450555292795",
-  appId: "1:450555292795:web:16f78dba2cf0e82ef046de"
+  apiKey: "AIzaSyC7LEJkEHUgqzrzVtUqJgTWi7vYDeoP7hY",
+  authDomain: "sneaker-app-aa044.firebaseapp.com",
+  projectId: "sneaker-app-aa044",
+  storageBucket: "sneaker-app-aa044.appspot.com",
+  messagingSenderId: "156702972967",
+  appId: "1:156702972967:web:5f94de5fe39444de984202"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const appFirebase = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app)
+export default appFirebase

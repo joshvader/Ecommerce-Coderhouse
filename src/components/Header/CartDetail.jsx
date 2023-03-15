@@ -1,13 +1,50 @@
 import { useContext } from "react";
 import {useCartDetails} from "../../context/useCartDetails";
 
-import imgSmall from "@/assets/images/image-product-1-thumbnail.jpg"
 import DeleteIcon from "../icons/DeleteIcon";
+import appFirebase from "../../firebaseConfig/firebase";
 
+import {getFirestore, collection, addDoc} from "firebase/firestore"
+
+const db = getFirestore(appFirebase)
 
 export default () => { 
 
-    const {cartProducts,deleteCartProducts} = useContext (useCartDetails)
+    const {cartProducts,deleteCartProducts, clearProductsList} = useContext (useCartDetails)
+
+
+    const cleanCart= (id)=>{
+      
+
+    }
+
+    //esta función es para guardar la venta en la api o base de datos
+    const saveInfo = async()=>{
+      try {
+        await addDoc(collection(db, 'ventas'),{
+          ...arreglo, subtotal
+        })
+      } catch (error) {
+        alert('ocurrio un error')
+        console.log(error)
+      }
+        
+
+Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Su compra va en camino',
+  showConfirmButton: false,
+  timer: 1500,
+
+})
+cartProducts
+
+    }
+    
+    const subtotal = cartProducts.reduce((a,c)=>a+c.quantity*c.price,0);
+    const arreglo = cartProducts;
+    
     return (
         <section className="absolute top-28 left-0 z-10 w-full md:max-w-md  md:left-full md:top-20 md:-translate-x-full">
         <div className="mx-4 rounded-md bg-gray-100 drop-shadow-md">
@@ -31,11 +68,17 @@ export default () => {
             </button>
           </article> 
             ))
+           
           }
+          <div className="ml-4 p-2 text-center">Subtotal: ({cartProducts.reduce ((a,c)=> a + c.quantity, 0)}): $
+           {cartProducts.reduce((a,c)=> a + c.quantity * c.price, 0)}
+           </div>
+          
           {
             cartProducts.length !== 0 && (
+              
                 <div className="px-6 pb-8">
-              <button className="w-full py-4 bg-orange-400 rounded-md text-white hover:bg-orange-700">Checkout</button>
+              <button className="w-full py-4 bg-orange-400 rounded-md text-white hover:bg-orange-700" onClick={saveInfo}>Checkout</button>
             </div>
             )
         }

@@ -1,0 +1,67 @@
+
+[
+    {"id":1, 
+    "title": "Zapatilla 1", 
+    "price": 30, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885631/Sneakers/image-product-1_aoayoe.jpg", 
+    "categoria":"women", 
+    "detail":"Zapatillas S Principia Mid X Sneakers blanco con acabados naranjo"
+    },
+    {"id":2, 
+    "title": "Zapatilla 2", 
+    "price": 40, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885631/Sneakers/image-product-9_d3tkyv.jpg", 
+    "categoria":"women",
+    "detail":"Zapatillas S Athos Mid W Sneakers Blanco Diesel"
+    },
+    {"id":3,
+    "title": "Zapatilla 3", 
+    "price": 60, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885629/Sneakers/image-product-3_n3vfic.jpg", 
+     "categoria":"women",
+     "detail":"Zapatillas S Sinna LowW Sneakers Crema Diesel"
+    },
+    {"id":4,
+    "title": "Zapatilla 4", 
+    "price": 65, 
+     "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885630/Sneakers/image-product-4_qf3itv.jpg",
+     "categoria":"women",
+     "detail":"Zapatillas S Principia Mid X Sneakers blanco con acabados naranjo"
+    },
+    {"id":5, 
+    "title": "Zapatilla 5", 
+    "price": 65, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885630/Sneakers/image-product-5_hg93rq.jpg",
+    "categoria":"men",
+    "detail":"Zapatillas S Principia Mid X Sneakers Gris Diesel."
+    },
+    {"id":6, 
+    "title": "Zapatilla 6", 
+    "price": 65, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885630/Sneakers/image-product-6_auyimh.jpg",
+    "categoria":"men",
+    "detail":"Zapatillas S Principia Mid X Sneakers Negro Diesel"
+    },
+    {"id":7, 
+    "title": "Zapatilla 7", 
+    "price": 65, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885630/Sneakers/image-product-7_tp5jqy.jpg",
+    "categoria":"men",
+    "detail":"Zapatillas S Principia Mid X Sneakers Rojo Diesel"
+    },
+    {"id":8, 
+    "title": "Zapatilla 8", 
+    "price": 65, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885630/Sneakers/image-product-8_aixmdr.jpg",
+    "categoria":"men",
+    "detail":"Zapatillas S Racer Lc Sneakers H8960 Azul Diesel"
+    },
+    {"id":10, 
+    "title": "Zapatilla 9", 
+    "price": 65, 
+    "pictureUrl": "https://res.cloudinary.com/dvlpzbeub/image/upload/v1678885631/Sneakers/image-product-10_f01pxg.jpg",
+    "categoria":"men",
+    "detail":"Zapatillas S Racer Lc Sneakers H8960 Azul Diesel"
+    }
+
+]

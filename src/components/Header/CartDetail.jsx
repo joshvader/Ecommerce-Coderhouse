@@ -10,7 +10,7 @@ const db = getFirestore(appFirebase)
 
 export default () => { 
 
-    const {cartProducts,deleteCartProducts} = useContext (useCartDetails)
+    const {cartProducts,deleteCartProducts, clearProductsList} = useContext (useCartDetails)
 
 
     
@@ -38,9 +38,15 @@ Swal.fire({
 
 
     }
-    
+
     const subtotal = cartProducts.reduce((a,c)=>a+c.quantity*c.price,0);
     const arreglo = cartProducts;
+
+    // Al guardar la información en Firestore procede a limpiar la lista de CartDeail
+  function checkOut ()  {
+    saveInfo();
+    clearProductsList()
+  }
     
     return (
         <section className="absolute top-28 left-0 z-10 w-full md:max-w-md  md:left-full md:top-20 md:-translate-x-full">
@@ -75,7 +81,7 @@ Swal.fire({
             cartProducts.length !== 0 && (
               
                 <div className="px-6 pb-8">
-              <button className="w-full py-4 bg-orange-400 rounded-md text-white hover:bg-orange-700" onClick={saveInfo}>Checkout</button>
+              <button className="w-full py-4 bg-orange-400 rounded-md text-white hover:bg-orange-700" onClick={checkOut}>Checkout</button>
             </div>
             )
         }

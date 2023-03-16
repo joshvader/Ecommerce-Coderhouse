@@ -60,12 +60,12 @@ Swal.fire({
             cartProducts.map((product)=>(
             <article  key={product.id}className="grid grid-cols-[1fr_4fr_1fr] gap-6 px-6 py-8 items-center ">
             <img src={product.img} alt="" className="rounded-md" />
-            <p>
+            <div>
               <h6>{product.title}</h6>
               <span>${product.price} x {product.quantity}</span>
               {" "} 
               <span className="font-bold">${product.price * product.quantity }</span>
-            </p>
+            </div>
             <button className="ml-auto" onClick={() => deleteCartProducts(product.id)}>
               <DeleteIcon   className="hover:fill-orange-400"/>
             </button>

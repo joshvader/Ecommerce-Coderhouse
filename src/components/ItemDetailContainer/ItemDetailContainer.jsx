@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
- import { arregloProductos } from "../../components/baseDatos/baseDatos"
+import data from "../../products.json"
+//  import { arregloProductos } from "../../components/baseDatos/baseDatos"
 // import {db} from "../../firebaseConfig/firebase.js"
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
@@ -14,7 +15,7 @@ export const ItemDetailContainer = () => {
 
     const getItem = (id) =>{
         return new Promise((resolve,reject)=>{
-            const product = arregloProductos.find(item=>item.id === parseInt(id));
+            const product = data.find(item=>item.id === parseInt(id));
             resolve(product)
         })
     }
